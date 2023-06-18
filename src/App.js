@@ -5,6 +5,7 @@ import Hook1 from "./components/Hook1";
 import Hook2 from "./components/Hook2";
 import Hook3 from "./components/Hook3";
 import Hook4 from "./components/Hook4";
+import Hook5 from "./components/Hook5";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       {/* useRef */}
       {/* <Hook3 /> */}
       {/* useMemo */}
-      <Hook4 />
+      {/* <Hook4 /> */}
+      {/* useCallback */}
+      <Hook5 />
     </div>
   );
 }

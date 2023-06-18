@@ -4,26 +4,16 @@ function Hook4() {
   // 1. optimize expensive operation
   // 2. Referential equality
 
-  const Factorial = (n) => {
-    let i = 0;
-    while (i < 200000000) i++;
-    if (n < 0) {
-      return -1;
-    }
-    if (n === 0) {
-      return 1;
-    }
-    return n * Factorial(n - 1);
-  };
-
   const [counter, setCounter] = useState(1);
 
   // If we are doing heavy operation as below then even though the counter value is not changed it will get executed everytime.
   // const result = Factorial(counter);
-  // By memoizing we can avoid the excution of heavy operation if the counter value is not changed
+  // Returns a memoized value which only gets recalculated when the defined dependencies change
+  // result holds the cached value returned by the Factorial
   const result = useMemo(() => {
     return Factorial(counter);
   }, [counter]);
+  // result changes every time counter changes
 
   const [name, setName] = useState("");
 
@@ -64,6 +54,18 @@ const DisplayName = React.memo(({ name }) => {
   console.log("rendered");
   return <p>My name is {name}</p>;
 });
+
+const Factorial = (n) => {
+  let i = 0;
+  while (i < 200000000) i++;
+  if (n < 0) {
+    return -1;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    return n * Factorial(n - 1);
+  }
+};
 
 export default Hook4;
 
