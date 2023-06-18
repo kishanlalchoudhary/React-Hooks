@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 // components
-import CComponent from "./CComponent";
-import FComponent from "./FComponent";
+import CComponent from "../Helpers/CComponent";
+import FComponent from "../Helpers/FComponent";
 
 export default function Hook2() {
   const [cflag, setCFlag] = useState(true);
