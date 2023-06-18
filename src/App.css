@@ -1,3 +1,9 @@
 .App {
     text-align: center;
 }
+
+.AppBorder {
+    border: 2px solid black;
+    padding: 25px;
+    text-align: center;
+}

@@ -6,6 +6,7 @@ import Hook2 from "./components/Hook2";
 import Hook3 from "./components/Hook3";
 import Hook4 from "./components/Hook4";
 import Hook5 from "./components/Hook5";
+import Hook6 from "./components/Hook6";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
       {/* useMemo */}
       {/* <Hook4 /> */}
       {/* useCallback */}
-      <Hook5 />
+      {/* <Hook5 /> */}
+      {/* useContext */}
+      <Hook6 />
     </div>
   );
 }

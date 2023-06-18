@@ -18,11 +18,13 @@ function Hook5() {
   //     return name;
   //   };
 
-  // when we make use of useCallbackit actually gives you referential equalit on the functions
+  // when we make use of useCallbackit actually gives you referential equality on the functions
 
+  // Returns a memoized version of a callback that only changes when the dependicies changes
   //   const displayName = useCallback(() => {
   //     return name;
   //   }, [name]);
+  // displayName changes when the name changes
 
   const displayName = useCallback(
     (greeting) => {
